@@ -195,14 +195,14 @@ const GoddessCalculator = () => {
         </div>
 
         {/* Reset Button */}
-        <div className="mt-4 text-center">
+        {/* <div className="mt-4 text-center">
           <button
             onClick={() => setSelections({ empty: null, left: null, center: null, right: null })}
-            className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
+            className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
           >
             重置選項
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
