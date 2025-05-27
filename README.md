@@ -1,13 +1,21 @@
-# React + Vite
+# Tower of Goddess RWD 手機版優化
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+本專案基於 [RvGIN/tower-of-goddess](https://github.com/RvGIN/tower-of-goddess) 進行 **RWD（響應式網頁設計）優化**，讓玩家能夠在 **手機裝置** 上更方便地查閱《楓之谷 Artale》中的 **女神任務（任務編號 400）解答**。
 
-Currently, two official plugins are available:
+## 🧩 專案目的
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 原始專案僅針對桌面瀏覽器設計，在手機瀏覽時體驗不佳。本專案針對 UI/UX 進行調整，改善以下幾點：
 
-## Expanding the ESLint configuration
+- 支援手機、平板等多種裝置瀏覽
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# tower-of-goddess
+## 🔗 專案連結
+
+- 🔍 線上預覽：[https://foylaou.github.io/tower-of-goddess/](https://foylaou.github.io/tower-of-goddess/)
+- 📦 原始專案來源：https://github.com/RvGIN/tower-of-goddess
+
+## 🔧 開發技術
+
+
+- RWD 響應式設計
+- vite+react
+
