@@ -1,4 +1,4 @@
-# Tower of Goddess RWD 手機版優化
+# 女神400速解 RWD 手機版優化版
 
 本專案基於 [RvGIN/tower-of-goddess](https://github.com/RvGIN/tower-of-goddess) 進行 **RWD（響應式網頁設計）優化**，讓玩家能夠在 **手機裝置** 上更方便地查閱《楓之谷 Artale》中的 **女神任務（任務編號 400）解答**。
 
