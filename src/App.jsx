@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './app.css'
+
 const GoddessCalculator = () => {
   const [selections, setSelections] = useState({
     empty: null,
@@ -84,15 +84,15 @@ const GoddessCalculator = () => {
   // 渲染選項按鈕組
   const renderOptionGroup = (title, category) => {
     return (
-      <fieldset className="flex flex-col  lg:flex-row mb-6 sm:mb-8">
+      <fieldset className="flex flex-col lg:flex-row mb-6 lg:mb-8">
         <div className="lg:w-1/3 mb-2 lg:mb-0 flex items-center justify-center lg:justify-start">
-          <p className="text-lg sm:text-2xl lg:text-4xl text-center lg:text-left">
+          <p className="text-lg md:text-2xl lg:text-4xl text-center lg:text-left">
             {title}
           </p>
         </div>
         <div className="flex flex-1 justify-center lg:justify-start items-center">
           {[0, 1, 2].map((value) => (
-            <div key={value} className={value === 1 ? "mx-4 sm:mx-6 lg:mx-8" : ""}>
+            <div key={value} className={value === 1 ? "mx-4 md:mx-6 lg:mx-8" : ""}>
               <input 
                 type="radio" 
                 id={`${category}${value}`} 
@@ -106,11 +106,11 @@ const GoddessCalculator = () => {
                 htmlFor={`${category}${value}`}
                 className={`
                   inline-block cursor-pointer
-                  text-xl sm:text-2xl lg:text-4xl
-                  font-semibold py-2 px-3 sm:px-4 lg:px-6
+                  text-xl md:text-2xl lg:text-4xl
+                  font-semibold py-2 px-3 md:px-4 lg:px-6
                   border-2 rounded-lg
                   transition-all duration-200 ease-in-out
-                  min-w-[3rem] sm:min-w-[4rem] lg:min-w-[5rem]
+                  min-w-[3rem] md:min-w-[4rem] lg:min-w-[5rem]
                   text-center
                   ${selections[category] === value 
                     ? 'bg-blue-500 text-white border-blue-500' 
@@ -131,29 +131,29 @@ const GoddessCalculator = () => {
     <div className="flex justify-center min-h-screen bg-gray-50 p-4">
       <div className="w-full max-w-4xl">
         {/* Banner */}
-        <div className="text-xl sm:text-2xl lg:text-3xl font-bold my-2 sm:my-4 text-center sm:text-left">
+        <div className="text-xl md:text-2xl lg:text-3xl font-bold my-2 md:my-4 text-center">
           女神 400 速解小工具
         </div>
 
         {/* Main Content */}
-        <div className="w-full p-4 sm:p-6 bg-white border rounded-lg shadow-lg">
+        <div className="w-full p-4 md:p-6 bg-white border rounded-lg shadow-lg">
           {/* Output Display */}
-          <div className="h-32 sm:h-40 lg:h-48 flex justify-center items-center shadow-inner border-2 border-gray-200 rounded-lg mb-6 bg-gray-50 p-4">
+          <div className="h-32 md:h-40 lg:h-48 flex justify-center items-center shadow-inner border-2 border-gray-200 rounded-lg mb-6 bg-gray-50 p-4">
             <div className="text-center">
               {output ? (
                 // 如果輸出是純數字（結果），使用大字體
                 /^\d+$/.test(output) ? (
-                  <div className="text-3xl sm:text-5xl lg:text-7xl font-bold text-blue-600">
+                  <div className="text-3xl md:text-5xl lg:text-7xl font-bold text-blue-600">
                     {output}
                   </div>
                 ) : (
                   // 如果是錯誤訊息，使用中等字體
-                  <div className="text-lg sm:text-xl lg:text-2xl text-red-600 font-medium">
+                  <div className="text-lg md:text-xl lg:text-2xl text-red-600 font-medium">
                     {output}
                   </div>
                 )
               ) : (
-                <div className="text-sm sm:text-base lg:text-lg text-gray-500">
+                <div className="text-sm md:text-base lg:text-lg text-gray-500">
                   請選擇所有選項以查看結果
                 </div>
               )}
@@ -162,23 +162,23 @@ const GoddessCalculator = () => {
 
           <div className="w-full">
             {/* Platform Status Guide */}
-            <div className="flex flex-col lg:flex-row mb-6 sm:mb-8">
-              <p className="text-lg sm:text-2xl lg:text-4xl flex justify-center lg:justify-start items-center mb-4 lg:mb-0 lg:w-1/3">
+            <div className="flex flex-col lg:flex-row mb-6 lg:mb-8">
+              <p className="text-lg md:text-2xl lg:text-4xl flex justify-center lg:justify-start items-center mb-4 lg:mb-0 lg:w-1/3">
                 平台狀態
               </p>
               <div className="text-gray-600 flex-1 lg:pl-4">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 lg:gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-4">
                   <div className="flex items-center">
-                    <span className="w-6 sm:w-8 font-bold text-base sm:text-lg lg:text-xl text-blue-600 mr-2">0:</span>
-                    <p className="text-xs sm:text-sm lg:text-base">No platforms are correct</p>
+                    <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">0:</span>
+                    <p className="text-xs md:text-sm lg:text-base">No platforms are correct</p>
                   </div>
                   <div className="flex items-center">
-                    <span className="w-6 sm:w-8 font-bold text-base sm:text-lg lg:text-xl text-blue-600 mr-2">1:</span>
-                    <p className="text-xs sm:text-sm lg:text-base">1 platform is correct</p>
+                    <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">1:</span>
+                    <p className="text-xs md:text-sm lg:text-base">1 platform is correct</p>
                   </div>
                   <div className="flex items-center">
-                    <span className="w-6 sm:w-8 font-bold text-base sm:text-lg lg:text-xl text-blue-600 mr-2">2:</span>
-                    <p className="text-xs sm:text-sm lg:text-base">2 platforms are correct</p>
+                    <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">2:</span>
+                    <p className="text-xs md:text-sm lg:text-base">2 platforms are correct</p>
                   </div>
                 </div>
               </div>
@@ -195,14 +195,14 @@ const GoddessCalculator = () => {
         </div>
 
         {/* Reset Button */}
-        {/* <div className="mt-4 text-center">
+        <div className="mt-4 text-center">
           <button
             onClick={() => setSelections({ empty: null, left: null, center: null, right: null })}
-            className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
+            className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
           >
             重置選項
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   );
