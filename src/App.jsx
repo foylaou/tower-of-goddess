@@ -84,46 +84,46 @@ const GoddessCalculator = () => {
   // 渲染選項按鈕組
   const renderOptionGroup = (title, category) => {
     return (
-      <fieldset className="flex flex-col lg:flex-row mb-6 lg:mb-8">
-        <div className="lg:w-1/3 mb-2 lg:mb-0 flex items-center justify-center lg:justify-start">
-          <p className="text-lg md:text-2xl lg:text-4xl text-center lg:text-left">
-            {title}
-          </p>
-        </div>
-        <div className="flex flex-1 justify-center lg:justify-start items-center">
-          {[0, 1, 2].map((value) => (
-            <div key={value} className={value === 1 ? "mx-4 md:mx-6 lg:mx-8" : ""}>
-              <input 
-                type="radio" 
-                id={`${category}${value}`} 
-                name={category} 
-                value={value}
-                checked={selections[category] === value}
-                onChange={(e) => handleSelection(category, e.target.value)}
-                className="hidden"
-              />
-              <label 
-                htmlFor={`${category}${value}`}
-                className={`
-                  inline-block cursor-pointer
-                  text-xl md:text-2xl lg:text-4xl
-                  font-semibold py-2 px-3 md:px-4 lg:px-6
-                  border-2 rounded-lg
-                  transition-all duration-200 ease-in-out
-                  min-w-[3rem] md:min-w-[4rem] lg:min-w-[5rem]
-                  text-center
-                  ${selections[category] === value 
-                    ? 'bg-blue-500 text-white border-blue-500' 
-                    : 'bg-transparent text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white'
-                  }
-                `}
-              >
-                {value}
-              </label>
-            </div>
-          ))}
-        </div>
-      </fieldset>
+      <fieldset className="flex flex-col lg:flex-row mb-4 lg:mb-6">
+ <div className="lg:w-1/3 mb-1 lg:mb-0 flex items-center justify-center lg:justify-start">
+   <p className="text-lg md:text-2xl lg:text-4xl text-center lg:text-left">
+     {title}
+   </p>
+ </div>
+ <div className="flex flex-1 justify-center lg:justify-start items-center">
+   {[0, 1, 2].map((value) => (
+     <div key={value} className={value === 1 ? "mx-3 md:mx-4 lg:mx-6" : ""}>
+       <input 
+         type="radio" 
+         id={`${category}${value}`} 
+         name={category} 
+         value={value}
+         checked={selections[category] === value}
+         onChange={(e) => handleSelection(category, e.target.value)}
+         className="hidden"
+       />
+       <label 
+         htmlFor={`${category}${value}`}
+         className={`
+           inline-block cursor-pointer
+           text-xl md:text-2xl lg:text-4xl
+           font-semibold py-2 px-3 md:px-4 lg:px-6
+           border-2 rounded-lg
+           transition-all duration-200 ease-in-out
+           min-w-[3rem] md:min-w-[4rem] lg:min-w-[5rem]
+           text-center
+           ${selections[category] === value 
+             ? 'bg-blue-500 text-white border-blue-500' 
+             : 'bg-transparent text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white'
+           }
+         `}
+       >
+         {value}
+       </label>
+     </div>
+   ))}
+ </div>
+</fieldset>
     );
   };
 
@@ -138,7 +138,7 @@ const GoddessCalculator = () => {
         {/* Main Content */}
         <div className="w-full p-4 md:p-6 bg-white border rounded-lg shadow-lg">
           {/* Output Display */}
-          <div className="h-32 md:h-40 lg:h-48 flex justify-center items-center shadow-inner border-2 border-gray-200 rounded-lg mb-6 bg-gray-50 p-4">
+          <div className="h-20 md:h-28 lg:h-32 flex justify-center items-center shadow-inner border-2 border-gray-200 rounded-lg mb-6 bg-gray-50 p-4">
             <div className="text-center">
               {output ? (
                 // 如果輸出是純數字（結果），使用大字體
@@ -162,26 +162,26 @@ const GoddessCalculator = () => {
 
           <div className="w-full">
             {/* Platform Status Guide */}
-            <div className="flex flex-col lg:flex-row mb-6 lg:mb-8">
-              <p className="text-lg md:text-2xl lg:text-4xl flex justify-center lg:justify-start items-center mb-4 lg:mb-0 lg:w-1/3">
-                平台狀態
-              </p>
-              <div className="text-gray-600 flex-1 lg:pl-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-4">
-                  <div className="flex items-center">
-                    <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">0:</span>
-                    <p className="text-xs md:text-sm lg:text-base">NPC回答沒有任何正確</p>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">1:</span>
-                    <p className="text-xs md:text-sm lg:text-base">NPC回答有1個正確</p>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">2:</span>
-                    <p className="text-xs md:text-sm lg:text-base">NPC回答有2個正確</p>
-                  </div>
+            <div className="flex flex-col lg:flex-row mb-4 lg:mb-6">
+            <p className="text-lg md:text-2xl lg:text-4xl flex justify-center lg:justify-start items-center mb-2 lg:mb-0 lg:w-1/3">
+              平台狀態
+            </p>
+            <div className="text-gray-600 flex-1 lg:pl-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-1 lg:gap-2">
+                <div className="flex items-center">
+                  <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">0:</span>
+                  <p className="text-xs md:text-sm lg:text-base">NPC回答沒有任何正確</p>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">1:</span>
+                  <p className="text-xs md:text-sm lg:text-base">NPC回答有1個正確</p>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">2:</span>
+                  <p className="text-xs md:text-sm lg:text-base">NPC回答有2個正確</p>
                 </div>
               </div>
+            </div>
             </div>
 
             {/* Option Groups */}
