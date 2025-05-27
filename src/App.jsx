@@ -170,15 +170,15 @@ const GoddessCalculator = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-4">
                   <div className="flex items-center">
                     <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">0:</span>
-                    <p className="text-xs md:text-sm lg:text-base">No platforms are correct</p>
+                    <p className="text-xs md:text-sm lg:text-base">NPC回答沒有任何正確</p>
                   </div>
                   <div className="flex items-center">
                     <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">1:</span>
-                    <p className="text-xs md:text-sm lg:text-base">1 platform is correct</p>
+                    <p className="text-xs md:text-sm lg:text-base">NPC回答有1個正確</p>
                   </div>
                   <div className="flex items-center">
                     <span className="w-6 md:w-8 font-bold text-base md:text-lg lg:text-xl text-blue-600 mr-2">2:</span>
-                    <p className="text-xs md:text-sm lg:text-base">2 platforms are correct</p>
+                    <p className="text-xs md:text-sm lg:text-base">NPC回答有2個正確</p>
                   </div>
                 </div>
               </div>
